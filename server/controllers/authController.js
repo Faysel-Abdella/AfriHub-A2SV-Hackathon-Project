@@ -11,19 +11,15 @@ const { createJWT } = require("../utils/tokenUtil");
 exports.signup = async (req, res, next) => {
   const email = req.body.email;
   const password = req.body.password;
-  const username = req.body.username;
-  const phone = req.body.phone;
-  const birthDayYear = req.body.birthDayYear;
-
+  const fullName = req.body.fullName;
   const hashedPassword = await bcrypt.hash(password, 10);
 
   const user = new User({
     email,
     password: hashedPassword,
-    username,
-    phone,
-    birthDayYear,
+    fullName,
   });
+
   await user.save();
 
   const token = user.createJWT();

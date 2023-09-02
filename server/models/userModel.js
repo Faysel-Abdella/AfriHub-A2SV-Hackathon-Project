@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
 
-const jwt = require("jsonwebtoken")
+const jwt = require("jsonwebtoken");
 
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
-  name: {
+  fullName: {
     type: String,
   },
 
@@ -17,10 +17,13 @@ const userSchema = new Schema({
     type: String,
   },
 
-  username: {
-    type: String,
+  skills: {
+    type: Object,
   },
 
+  position: {
+    type: String,
+  },
 });
 
 //Create a function to return the user with out its password
@@ -33,11 +36,9 @@ userSchema.methods.withOutPassword = function () {
 };
 
 userSchema.methods.createJWT = function () {
-  return jwt.sign(
-      {id: this._id},
-      process.env.JWT_SECRET,
-      {expiresIn: "24h"}
-  )
-}
+  return jwt.sign({ id: this._id }, process.env.JWT_SECRET, {
+    expiresIn: "24h",
+  });
+};
 
 module.exports = mongoose.model("User", userSchema);

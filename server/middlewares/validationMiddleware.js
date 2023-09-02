@@ -24,7 +24,7 @@ const withValidatorErrors = (validateValues) => {
   ];
 };
 
-exports.validateFirstSignup = withValidatorErrors([
+exports.validateSignup = withValidatorErrors([
   body("email")
     .notEmpty()
     .withMessage("Email is required")
@@ -38,6 +38,7 @@ exports.validateFirstSignup = withValidatorErrors([
         throw new Error("Email already exist, please use another email");
       }
     }),
+  body("fullName").notEmpty().withMessage("Full name is required"),
   body("password")
     .notEmpty()
     .isLength({ min: 5 })

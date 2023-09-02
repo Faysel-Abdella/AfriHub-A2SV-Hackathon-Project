@@ -7,8 +7,8 @@ const validationFunctions = require("../middlewares/validationMiddleware");
 const userController = require("../controllers/authController");
 
 router.post(
-  "/first-signup",
-  // validationFunctions.validateFirstSignup,
+  "/signup",
+  validationFunctions.validateSignup,
   userController.signup
 );
 
