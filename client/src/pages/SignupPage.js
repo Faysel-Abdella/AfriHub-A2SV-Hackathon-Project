@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/images/africa-logo.png";
 
 const SignupPage = () => {
   return (
     <div
       className="container-fluid d-flex justify-content-center align-items-center"
-      style={{ height: "100vh", background: "#3366ff" }}
+      style={{ minHeight: "100vh", background: "#3366ff", backgroundSize: "contain"}}
     >
       <form className="card p-5" style={{ width: "clamp(25rem, 25rem + 1vw ,30rem)", background: "#071C42"}}>
         <div class="mb-3 mt-3 d-flex justify-content-center align-items-center">

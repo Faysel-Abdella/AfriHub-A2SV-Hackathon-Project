@@ -26,7 +26,7 @@ const Navigation = () => {
 
                 <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 mx-3 justify-content-center mb-md-0">
                     <li><a href="/" className="nav-link px-2 text-primary">Home</a></li>
-                    <li><a href="/jobs" className="nav-link px-2 text-dark">Jobs</a></li>
+                    <li><a href="/jobs" className="nav-link px-2 text-dark">Find Jobs</a></li>
                     <li><a href="#" className="nav-link px-2 text-dark">FAQs</a></li>
                     <li><a href="#" className="nav-link px-2 text-dark">About</a></li>
                 </ul>
