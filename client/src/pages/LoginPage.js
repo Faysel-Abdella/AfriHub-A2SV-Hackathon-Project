@@ -1,7 +1,6 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { AnyObject } from "yup";
 import axios from "axios";
 
 import logo from "../assets/images/africa-logo.png";
