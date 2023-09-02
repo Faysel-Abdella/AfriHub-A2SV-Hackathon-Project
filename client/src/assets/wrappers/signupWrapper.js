@@ -45,7 +45,7 @@ const Wrapper = styled.section`
       z-index: 3;
       /* height: 55rem; */
       background: var(--secondary-background);
-      padding: 2rem 2rem;
+      padding: 2rem 3rem;
       padding-top: 3rem;
     }
     .main-container {

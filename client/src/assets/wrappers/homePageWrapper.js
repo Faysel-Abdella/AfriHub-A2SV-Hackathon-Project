@@ -29,7 +29,10 @@ const Wrapper = styled.section`
   .image-container {
     position: relative;
     box-shadow: var(--main-shadow);
-    height: 54rem;
+    height: 70rem;
+    width: 70%;
+    width: 40rem;
+    background-color: #0d333f;
     .inside-image {
       height: 100%;
     }
@@ -39,15 +42,15 @@ const Wrapper = styled.section`
     position: absolute;
     top: 0;
     left: 0;
-    margin: 4rem 0rem;
-    width: 80%;
-    margin-left: 10%;
+    margin: 18rem 0rem;
+    width: 100%;
+    /* margin-left: 20%; */
     background: linear-gradient(
       135deg,
       rgba(255, 255, 255, 0.26) 0%,
       rgba(255, 255, 255, 0.07) 100%
     );
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(4px);
     /* padding: 15rem 15rem; */
   }
   .inside-image-container-content {
@@ -55,8 +58,8 @@ const Wrapper = styled.section`
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    margin: 10rem 3rem;
-    margin-bottom: 15rem;
+    margin: 5rem 3rem;
+    /* margin-bottom: 15rem; */
   }
   .inside-image-container-content-text {
     font-size: 5.4rem;

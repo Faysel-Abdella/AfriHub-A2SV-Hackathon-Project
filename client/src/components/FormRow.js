@@ -29,9 +29,9 @@ const FormRow = ({
           value={value}
           required
         />
-        {EyeIcon && (
+        {/* {EyeIcon && (
           <EyeIcon className="eye-icon" onClick={toggleVisiblePass} />
-        )}
+        )} */}
       </div>
     </Wrapper>
   );

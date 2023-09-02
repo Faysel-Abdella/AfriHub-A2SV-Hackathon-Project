@@ -211,6 +211,7 @@ a:active {
   outline: none;
 }
 
+
 @media (max-width: 900px) {
   .cta-button {
     padding: 1rem 3rem;

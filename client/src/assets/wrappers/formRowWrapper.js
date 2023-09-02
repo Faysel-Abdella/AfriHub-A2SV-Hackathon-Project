@@ -5,9 +5,13 @@ const Wrapper = styled.section`
     position: relative;
   }
 
-  /* .form-label {
-    display: block;
-  } */
+  .form-label {
+    color: #ffffff;
+    background-color: #943838;
+    padding: 0.4rem;
+    width: 50%;
+    border-radius: 10px;
+  }
 
   .input {
     background: var(--input-background);
@@ -24,6 +28,16 @@ const Wrapper = styled.section`
     /* margin-top: 12px; */
     font-size: 20px;
     color: var(--show-password-color);
+  }
+
+  @media (max-width: 960px) {
+    .form-label {
+      color: var(--input-text-color);
+      background-color: transparent;
+      padding: 0;
+      width: 100%;
+      border-radius: 10px;
+    }
   }
 `;
 
