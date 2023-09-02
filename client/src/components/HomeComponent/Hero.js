@@ -1,5 +1,7 @@
 import React from "react";
-import heroImg from '../../assets/images/heroImg.svg'
+import heroImg from "../../assets/images/heroImg.svg";
+
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -9,14 +11,19 @@ const Hero = () => {
         style={{ height: "90vh" }}
       >
         <div className="col-12 col-md-6">
-          <h1 className="text-primary my-3" style={{textAlign: "left"}}>Connecting Talents Across Africa!</h1>
+          <h1 className="text-primary my-3" style={{ textAlign: "left" }}>
+            Connecting Talents Across Africa!
+          </h1>
           <p className="">
-            The biggest problem in Africa is not the lack of jobs; the real problem is that we do not know where to look for!
+            The biggest problem in Africa is not the lack of jobs; the real
+            problem is that we do not know where to look!
           </p>
-          <a href="/signup" className="btn btn-primary">Signup Now</a>
+          <Link to={"/signup"}>
+            <button className="btn btn-primary">Signup Now</button>
+          </Link>
         </div>
         <div className="col-12 col-md-6 d-flex justify-content-center">
-          <img src={heroImg} className="w-75 w-md-50"/>
+          <img src={heroImg} className="w-75 w-md-50" />
         </div>
       </div>
     </div>
