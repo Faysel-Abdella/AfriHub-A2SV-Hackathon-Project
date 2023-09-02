@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/images/africa-logo.png";
 
 import { Form, Link, redirect, useNavigation } from "react-router-dom";
@@ -33,7 +34,7 @@ const SignupPage = () => {
   return (
     <div
       className="container-fluid d-flex justify-content-center align-items-center"
-      style={{ height: "100%", background: "#3366ff" }}
+      style={{ height: "100vh", background: "#3366ff" }}
     >
       <Form
         method="POST"
