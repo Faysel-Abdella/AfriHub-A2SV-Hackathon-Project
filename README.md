@@ -3,3 +3,5 @@
 Team Name:- AfriSolvers.
 
 Project Life Demo:- <a href="https://afrihub-a2sv-hackathon-project.onrender.com/">See live</a>
+
+Server side:- https://afrihub-a2sv-hackathon-project-server.onrender.com/
