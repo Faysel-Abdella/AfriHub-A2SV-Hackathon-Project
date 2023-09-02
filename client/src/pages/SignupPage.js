@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import logo from "../assets/images/africa-logo.png";
 
 import { Form, Link, redirect, useNavigation } from "react-router-dom";
