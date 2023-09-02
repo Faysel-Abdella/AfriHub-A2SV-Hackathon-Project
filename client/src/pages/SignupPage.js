@@ -18,8 +18,8 @@ import { BsEye } from "react-icons/bs";
 const SignupPage = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
-  const togglePasswordVisible = () => setPasswordVisible(!passwordVisible);
-  const toggleConfirmPasswordVisible = () =>
+  // const togglePasswordVisible = () => setPasswordVisible(!passwordVisible);
+  // const toggleConfirmPasswordVisible = () =>
     setConfirmPasswordVisible(!confirmPasswordVisible);
 
   const [isSigning, setIsSigning] = useState(false);
