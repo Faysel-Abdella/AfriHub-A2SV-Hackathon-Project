@@ -1,12 +1,7 @@
 require("express-async-error");
 
-const fs = require("fs");
-const path = require("path");
-// const cors = require("cors")
-
 const express = require("express");
 const bodyParser = require("body-parser");
-const morgan = require("morgan");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 
@@ -16,27 +11,15 @@ const { StatusCodes } = require("http-status-codes");
 const app = express();
 app.use(cookieParser());
 
-//create a new file for storing morgan logs
-const accessLogStream = fs.createWriteStream(
-  path.join(__dirname, "access.log"),
-  { flags: "a" }
-);
-
 //For parsing json data(application/json) from incoming req we use the following
 app.use(bodyParser.json());
-app.use(morgan("dev", { stream: accessLogStream }));
 dotenv.config();
 
 app.get("/", (req, res, next) => {
   res.send("Hi :)");
 });
 
-const taskRoute = require("./routes/taskRoute");
 const authRoute = require("./routes/authRoute");
-const userRoute = require("./routes/userRoute");
-
-const { authenticateUser } = require("./middlewares/authMiddleware");
-const { tokenAuth } = require("./middlewares/tokenAuth");
 
 app.use((req, res, next) => {
   //set header to all response, NOTE that setHeader() does not send response
@@ -58,8 +41,6 @@ app.use((req, res, next) => {
 });
 
 app.use(authRoute);
-app.use(taskRoute);
-app.use(tokenAuth, userRoute);
 
 app.get("/test", (req, res, next) => {
   res.json({ message: "Hello world" });

@@ -21,12 +21,6 @@ const userSchema = new Schema({
     type: String,
   },
 
-  phone: {
-    type: Number,
-  },
-  birthDayYear: {
-    type: Number,
-  },
 });
 
 //Create a function to return the user with out its password

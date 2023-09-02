@@ -8,22 +8,22 @@ const userController = require("../controllers/authController");
 
 router.post(
   "/first-signup",
-  validationFunctions.validateFirstSignup,
-  userController.firstSignup
+  // validationFunctions.validateFirstSignup,
+  userController.signup
 );
 
-router.post(
-  "/complete-signup",
-  validationFunctions.validateCompleteSignupInput,
-  userController.completeSignup
-);
+// router.post(
+//   "/complete-signup",
+//   validationFunctions.validateCompleteSignupInput,
+//   userController.completeSignup
+// );
 
-router.post(
-  "/auth/login",
-  validationFunctions.validateLoginInput,
-  userController.login
-);
+// router.post(
+//   "/auth/login",
+//   validationFunctions.validateLoginInput,
+//   userController.login
+// );
 
-router.get("/auth/logout", userController.logout);
+// router.get("/auth/logout", userController.logout);
 
 module.exports = router;
