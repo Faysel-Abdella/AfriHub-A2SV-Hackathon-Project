@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 
 import { toast } from "react-toastify";
-import customFetch from "../util/customFetch.js";
+import customFetch from "../utils/customeFecth";
 
 import logo from "../assets/images/africa-logo.png";
 
@@ -37,7 +37,7 @@ const LoginPage = () => {
   return (
     <div
       className="container-fluid d-flex justify-content-center align-items-center"
-      style={{ height: "100vh", background: "#3366ff" }}
+      style={{ height: "100vh", background: "#b4c7ff" }}
     >
       <form
         className="card p-5"
