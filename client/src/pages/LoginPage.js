@@ -21,25 +21,33 @@ export const action = async ({ request }) => {
     errors.message = "password too short";
     return errors;
   }
-
+  console.log("log in action");
   try {
-    await customFetch.post("/auth/login", data);
+    const dataFromServer = await customFetch.post("/auth/login", data);
+
+    const { token } = dataFromServer.data;
+    localStorage.setItem("token", token);
+
     toast.success("Login success", { autoClose: 3000 });
-    return redirect("/dashboard/all-jobs");
+    return redirect("/jobs");
   } catch (error) {
     // toast.error(error?.response?.data?.message);
+    console.log(error);
     error.message = error?.response?.data?.message;
     return error;
   }
 };
 
 const LoginPage = () => {
+  const navigation = useNavigation();
+  const isSubmitting = navigation === "submitting";
   return (
     <div
       className="container-fluid d-flex justify-content-center align-items-center"
       style={{ height: "100vh", background: "#b4c7ff" }}
     >
-      <form
+      <Form
+        method="POST"
         className="card p-5"
         style={{
           width: "clamp(25rem, 25rem + 1vw ,30rem)",
@@ -60,6 +68,7 @@ const LoginPage = () => {
             class="form-control"
             id="email"
             placeholder="Enter email"
+            required
           />
         </div>
         <div class="mb-3 mt-3">
@@ -72,20 +81,24 @@ const LoginPage = () => {
             class="form-control"
             id="password"
             placeholder="Enter Password"
+            required
           />
         </div>
         <div class="mt-3 mb-3 d-flex">
-          <p className="text-light ">Do not have account </p>
+          <p className="text-light ">Do not have account ? </p>
           <a href="/signup" className="link-light mx-2">
             Signup
           </a>
         </div>
         {/* <div class="mt-3"> */}
-        <button className="btn w-100 border-primary rounded-5 text-light mt-3">
-          Login
+        <button
+          className="btn w-100 border-primary rounded-5 text-light mt-3"
+          disabled={isSubmitting}
+        >
+          {isSubmitting ? "Logging in..." : "Login"}
         </button>
         {/* </div> */}
-      </form>
+      </Form>
     </div>
   );
 };

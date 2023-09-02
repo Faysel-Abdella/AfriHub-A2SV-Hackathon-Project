@@ -11,6 +11,7 @@ import LoginPage from "./pages/LoginPage";
 import ErrorPage from "./pages/404";
 
 import { action as signupAction } from "./pages/SignupPage";
+import { action as loginAction } from "./pages/LoginPage";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <LoginPage />,
+    action: loginAction,
   },
   {
     path: "/signup",
