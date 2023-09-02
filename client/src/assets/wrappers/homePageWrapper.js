@@ -5,6 +5,7 @@ import insidecover from "../images/insidecover.png";
 
 const Wrapper = styled.section`
   /* overflow: hidden; */
+  font-family: "Lato", sans-serif;
   display: flex;
   justify-content: center;
 

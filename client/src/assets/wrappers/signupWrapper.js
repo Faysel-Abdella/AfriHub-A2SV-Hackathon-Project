@@ -3,6 +3,7 @@
 import { styled } from "styled-components";
 
 const Wrapper = styled.section`
+  font-family: "Lato", sans-serif;
   width: 100%;
   .signup-container {
     z-index: 3;

@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 
 const Wrapper = styled.section`
+  font-family: "Lato", sans-serif;
   .input-container {
     position: relative;
   }
