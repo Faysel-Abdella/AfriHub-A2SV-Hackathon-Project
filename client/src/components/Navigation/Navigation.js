@@ -1,6 +1,9 @@
 import React from 'react'
-import './style.css'
 import { useNavigate } from 'react-router-dom'
+
+import logo from '../../assets/images/africa-logo.png'
+
+import './style.css'
 
 const Navigation = () => {
     const navigate = useNavigate();
@@ -17,10 +20,11 @@ const Navigation = () => {
         <div className="container">
             <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                 <a href="/" className="d-flex align-items-center mb-2 mb-lg-0 text-decoration-none">
-                    LOGO
+                    <img src={logo} alt='LOGO' style={{width: "2rem"}}/>
+                    <span className='mx-2 text-success'>AfriHub</span>
                 </a>
 
-                <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 mx-3 justify-content-center mb-md-0">
                     <li><a href="/" className="nav-link px-2 text-primary">Home</a></li>
                     <li><a href="/jobs" className="nav-link px-2 text-dark">Jobs</a></li>
                     <li><a href="#" className="nav-link px-2 text-dark">FAQs</a></li>
