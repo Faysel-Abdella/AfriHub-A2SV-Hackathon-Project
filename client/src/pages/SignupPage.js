@@ -96,7 +96,7 @@ const SignupPage = () => {
           />
         </div>
         <div class="mt-3 mb-3 d-flex">
-          <p className="text-light ">Already have account </p>
+          <p className="text-light ">Already have account ? </p>
           <a href="/login" className="link-light mx-2">
             Login
           </a>
