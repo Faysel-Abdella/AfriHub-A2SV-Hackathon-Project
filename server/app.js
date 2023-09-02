@@ -1,8 +1,10 @@
 require("express-async-error");
 
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
+const jobrouter = require("./routes/jobRouter")
 const mongoose = require("mongoose");
 
 const cookieParser = require("cookie-parser");
@@ -41,7 +43,7 @@ app.use((req, res, next) => {
 });
 
 app.use(authRoute);
-
+app.use("/",jobrouter);
 app.get("/test", (req, res, next) => {
   res.json({ message: "Hello world" });
 });
@@ -59,11 +61,12 @@ app.use((error, req, res, next) => {
   res.status(statusCode).json({ message: message });
 });
 
+const port = 8080
 mongoose
   .connect(process.env.MONGO_URL)
   .then((result) => {
-    app.listen(process.env.PORT || 8080, () => {
-      console.log("Server running... :)");
+    app.listen(process.env.PORT || port, () => {
+      console.log(`Server running on http://localhost:${port}`);
     });
   })
   .catch((err) => {

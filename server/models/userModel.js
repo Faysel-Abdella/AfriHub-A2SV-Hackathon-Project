@@ -5,6 +5,7 @@ const jwt = require("jsonwebtoken");
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
+
   fullName: {
     type: String,
   },
@@ -24,6 +25,9 @@ const userSchema = new Schema({
   position: {
     type: String,
   },
+  role:{
+    enum:["client","freelancer"]
+   }
 });
 
 //Create a function to return the user with out its password
