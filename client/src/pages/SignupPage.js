@@ -20,7 +20,7 @@ const SignupPage = () => {
   const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
   // const togglePasswordVisible = () => setPasswordVisible(!passwordVisible);
   // const toggleConfirmPasswordVisible = () =>
-    setConfirmPasswordVisible(!confirmPasswordVisible);
+    // setConfirmPasswordVisible(!confirmPasswordVisible);
 
   const [isSigning, setIsSigning] = useState(false);
 
