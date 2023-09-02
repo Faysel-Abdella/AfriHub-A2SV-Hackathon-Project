@@ -24,24 +24,24 @@ const JobPost = ({ title, description, skills, location, postDate, deadline, pri
     <div className="description py-3">
         <p>{description}</p>
     </div>
-    <div className="d-flex justify-content-between">
-        <div className="d-flex felx-wrap align-items-center">
+    <div className="d-flex flex-wrap justify-content-between">
+        <div className="d-flex flex-wrap col-md-8 align-items-center">
             {skills.map(skill => {
                 return(
-                    <span className="flex-item mx-2 bg-light rounded-2 text-dark px-3 py-1">{ skill }</span>
+                    <div className="mx-2 bg-light rounded-2 text-dark px-3 py-1">{ skill }</div>
                 )
             })}
         </div>
-        <div className="">
-        <button className="btn btn-primary mx-3 py-1">Save Project</button>
-        <button className="btn btn-primary mx-3 py-1">Applay Now</button>
+        <div className="col-12 col-md-4">
+            <button className="btn btn-primary mx-3 py-1 my-1">Save Project</button>
+            <button className="btn btn-primary mx-3 py-1 my-1">Applay Now</button>
         </div>
     </div>
-    <div className="job-info d-flex border-top py-1 mt-2">
-        <div className="mx-3">Location: <span className="text-primary">{ location }</span></div>
-        <div className="mx-3">Posted on: <span className="text-primary">{ postDate }</span></div>
-        <div className="mx-3">Deadline: <span className="text-primary">{ deadline }</span></div>
-        <div className="mx-3 d-flex gap-2">Ratin: <Rating /></div>
+    <div className=" d-flex flex-wrap border-top py-1 px-4 mt-2">
+        <div className="col-5 col-md-3">Location: <span className="text-primary">{ location }</span></div>
+        <div className="col-5 col-md-3">Posted on: <span className="text-primary">{ postDate }</span></div>
+        <div className="col-5 col-md-3">Deadline: <span className="text-primary">{ deadline }</span></div>
+        <div className="col-5 col-md-3 d-flex gap-2">Ratin: <Rating /></div>
     </div>
     </div>
   );
