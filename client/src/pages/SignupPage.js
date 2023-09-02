@@ -1,12 +1,42 @@
 import logo from "../assets/images/africa-logo.png";
 
+import { Form, Link, redirect, useNavigation } from "react-router-dom";
+import { toast } from "react-toastify";
+
+import customFetch from "../utils/customeFecth";
+
+export const action = async ({ request }) => {
+  //Change the request to the formData to simplify
+  const formData = await request.formData();
+  //Change the formData w/c is array to normal JS obj to send to the backend
+  const data = Object.fromEntries(formData);
+
+  try {
+    const dataFromServer = await customFetch.post("/auth/signup", data);
+
+    const { token } = dataFromServer.data;
+    localStorage.setItem("token", token);
+
+    toast.success("Registration successful", { autoClose: 1000 });
+    return redirect("/login");
+  } catch (error) {
+    //use conditional nesting
+    console.log(error);
+    toast.error(error?.response?.data?.message, { autoClose: 1000 });
+    return error;
+  }
+};
+
 const SignupPage = () => {
+  const navigation = useNavigation();
+  const isSubmitting = navigation.state === "submitting";
   return (
     <div
       className="container-fluid d-flex justify-content-center align-items-center"
       style={{ height: "100%", background: "#3366ff" }}
     >
-      <form
+      <Form
+        method="POST"
         className="card p-5"
         style={{
           width: "clamp(25rem, 25rem + 1vw ,30rem)",
@@ -18,18 +48,19 @@ const SignupPage = () => {
           <span className="text-light mx-4 fs-2">AfriHub</span>
         </div>
         <div class="mb-3 mt-3">
-          <label for="email" class="form-label fs-6 text-light">
+          <label htmlFor="name" class="form-label fs-6 text-light">
             Full Name:
           </label>
           <input
             type="text"
             class="form-control"
             id="name"
-            placeholder="Enter Fullname"
+            placeholder="Enter Full Name"
+            name="fullName"
           />
         </div>
         <div class="mb-3 mt-3">
-          <label for="email" class="form-label fs-6 text-light">
+          <label htmlFor="email" class="form-label fs-6 text-light">
             Email:
           </label>
           <input
@@ -37,10 +68,11 @@ const SignupPage = () => {
             class="form-control"
             id="email"
             placeholder="Enter email"
+            name="email"
           />
         </div>
         <div class="mb-3 mt-3">
-          <label for="email" class="form-label fs-6 text-light">
+          <label htmlFor="password" class="form-label fs-6 text-light">
             Password:
           </label>
           <input
@@ -48,17 +80,19 @@ const SignupPage = () => {
             class="form-control"
             id="password"
             placeholder="Enter Password"
+            name="password"
           />
         </div>
         <div class="mb-3 mt-3">
-          <label for="email" class="form-label fs-6 text-light">
+          <label htmlFor="confirmPassword" class="form-label fs-6 text-light">
             Confirm password:
           </label>
           <input
             type="password"
             class="form-control"
-            id="password"
-            placeholder="Re-Enter Password"
+            id="confirmPassword"
+            placeholder="Confirm Password"
+            name="confirmPassword"
           />
         </div>
         <div class="mt-3 mb-3 d-flex">
@@ -67,12 +101,15 @@ const SignupPage = () => {
             Login
           </a>
         </div>
-        <div class="mt-3">
-          <button className="btn w-100 border-primary rounded-5 text-light">
-            Signup
-          </button>
-        </div>
-      </form>
+        {/* <div class="mt-3"> */}
+        <button
+          className="btn w-100 border-primary rounded-5 text-light mt-3"
+          disabled={isSubmitting}
+        >
+          {isSubmitting ? "Signing up..." : "Signup"}
+        </button>
+        {/* </div> */}
+      </Form>
     </div>
   );
 };

@@ -10,6 +10,8 @@ import JobsPost from "./pages/JobsPost";
 import LoginPage from "./pages/LoginPage";
 import ErrorPage from "./pages/404";
 
+import { action as signupAction } from "./pages/SignupPage";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,6 +26,7 @@ const router = createBrowserRouter([
   {
     path: "/signup",
     element: <SignupPage />,
+    action: signupAction,
   },
   { path: "/Jobs", element: <JobsPost /> },
 ]);
