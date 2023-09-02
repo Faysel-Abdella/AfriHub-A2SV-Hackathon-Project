@@ -4,9 +4,15 @@ const SignupPage = () => {
   return (
     <div
       className="container-fluid d-flex justify-content-center align-items-center"
-      style={{ height: "100vh", background: "#3366ff" }}
+      style={{ height: "100%", background: "#3366ff" }}
     >
-      <form className="card p-5" style={{ width: "clamp(25rem, 25rem + 1vw ,30rem)", background: "#071C42"}}>
+      <form
+        className="card p-5"
+        style={{
+          width: "clamp(25rem, 25rem + 1vw ,30rem)",
+          background: "#071C42",
+        }}
+      >
         <div class="mb-3 mt-3 d-flex justify-content-center align-items-center">
           <img src={logo} alt="AfriHub" style={{ width: "3rem" }} />
           <span className="text-light mx-4 fs-2">AfriHub</span>
@@ -57,7 +63,9 @@ const SignupPage = () => {
         </div>
         <div class="mt-3 mb-3 d-flex">
           <p className="text-light ">Already have account </p>
-          <a href="/login" className="link-light mx-2">Login</a>
+          <a href="/login" className="link-light mx-2">
+            Login
+          </a>
         </div>
         <div class="mt-3">
           <button className="btn w-100 border-primary rounded-5 text-light">
