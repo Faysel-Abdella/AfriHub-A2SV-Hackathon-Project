@@ -24,7 +24,7 @@ const withValidatorErrors = (validateValues) => {
   ];
 };
 
-exports.validateSignup = withValidatorErrors([
+exports.validateSignupInput = withValidatorErrors([
   body("email")
     .notEmpty()
     .withMessage("Email is required")
@@ -52,4 +52,13 @@ exports.validateSignup = withValidatorErrors([
       }
       return true;
     }),
+]);
+
+exports.validateLoginInput = withValidatorErrors([
+  body("email")
+    .notEmpty()
+    .withMessage("Email is required")
+    .isEmail()
+    .withMessage("Please provide a valid email"),
+  body("password").notEmpty().withMessage("password is required"),
 ]);
