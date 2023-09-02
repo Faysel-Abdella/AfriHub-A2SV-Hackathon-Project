@@ -17,7 +17,9 @@ const FormRow = ({
   return (
     <Wrapper>
       <div className="input-container">
-        <label htmlFor={name}>{label}</label>
+        <label htmlFor={name} className="form-label">
+          {label}
+        </label>
         <input
           type={type}
           name={name}
@@ -27,9 +29,9 @@ const FormRow = ({
           value={value}
           required
         />
-        {EyeIcon && (
+        {/* {EyeIcon && (
           <EyeIcon className="eye-icon" onClick={toggleVisiblePass} />
-        )}
+        )} */}
       </div>
     </Wrapper>
   );

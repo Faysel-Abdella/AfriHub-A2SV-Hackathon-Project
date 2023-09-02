@@ -1,100 +1,79 @@
-import { useState } from "react";
-import { Form, useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-
-import Wrapper from "../assets/wrappers/signupPageWrapper";
-
-import FormRow from "../components/FormRow";
-// import CtaButton from "../components/CtaButton";
-
-import { PiArrowRightBold } from "react-icons/pi";
-import { BsEyeSlash } from "react-icons/bs";
-import { BsEye } from "react-icons/bs";
-
-// import customFetch from "../utils/customeFecth";
-// import { toast } from "react-toastify";
+import logo from "../assets/images/africa-logo.png";
 
 const SignupPage = () => {
-  const navigate = useNavigate();
-
-  const [passwordVisible, setPasswordVisible] = useState(false);
-  const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
-  const togglePasswordVisible = () => setPasswordVisible(!passwordVisible);
-  const toggleConfirmPasswordVisible = () =>
-    setConfirmPasswordVisible(!confirmPasswordVisible);
-
-  const dispatch = useDispatch();
-
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-
-  const [isSigning, setIsSigning] = useState(false);
-
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
-  };
-
-  const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
-  };
-
-  const handleConfirmPasswordChange = (event) => {
-    setConfirmPassword(event.target.value);
-  };
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    setIsSigning(true);
-
-    const request = {
-      email: email,
-      password: password,
-      confirmPassword: confirmPassword,
-    };
-  };
-
   return (
-    <Wrapper>
-      <div className="signup-container">
-        <div className="inside-singup">
-          <h1>Signup</h1>
-          <Form method="POST" onSubmit={handleSubmit}>
-            <FormRow name="name" type="text" label="Name" />
-            <FormRow name="lastName" type="text" label="Last Name" />
-            <FormRow name="email" type="text" label="Email" />
-            <FormRow
-              name="password"
-              type={passwordVisible ? "text" : "password"}
-              label="Password"
-              EyeIcon={passwordVisible ? BsEye : BsEyeSlash}
-              togglePassword={togglePasswordVisible}
-              onChange={handlePasswordChange}
-            />
-            <FormRow
-              name="confirmPassword"
-              type={confirmPasswordVisible ? "text" : "password"}
-              label="Confirm password"
-              EyeIcon={confirmPasswordVisible ? BsEye : BsEyeSlash}
-              togglePassword={toggleConfirmPasswordVisible}
-              onChange={handleConfirmPasswordChange}
-            />
-            {/* <CtaButton
-              text={` ${isSigning ? "Signing,  wait..." : "Complete signup"} `}
-              type="submit"
-              disabled={isSigning}
-              Icon={PiArrowRightBold}
-            /> */}
-          </Form>
-          <p className="normal-text">
-            Already have an account?{" "}
-            <a className="go-link" href="/login">
-              Login
-            </a>
-          </p>
+    <div
+      className="container-fluid d-flex justify-content-center align-items-center"
+      style={{ height: "100%", background: "#3366ff" }}
+    >
+      <form
+        className="card p-5"
+        style={{
+          width: "clamp(25rem, 25rem + 1vw ,30rem)",
+          background: "#071C42",
+        }}
+      >
+        <div class="mb-3 mt-3 d-flex justify-content-center align-items-center">
+          <img src={logo} alt="AfriHub" style={{ width: "3rem" }} />
+          <span className="text-light mx-4 fs-2">AfriHub</span>
         </div>
-      </div>
-    </Wrapper>
+        <div class="mb-3 mt-3">
+          <label for="email" class="form-label fs-6 text-light">
+            Full Name:
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Enter Fullname"
+          />
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="email" class="form-label fs-6 text-light">
+            Email:
+          </label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Enter email"
+          />
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="email" class="form-label fs-6 text-light">
+            Password:
+          </label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            placeholder="Enter Password"
+          />
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="email" class="form-label fs-6 text-light">
+            Confirm password:
+          </label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            placeholder="Re-Enter Password"
+          />
+        </div>
+        <div class="mt-3 mb-3 d-flex">
+          <p className="text-light ">Already have account </p>
+          <a href="/login" className="link-light mx-2">
+            Login
+          </a>
+        </div>
+        <div class="mt-3">
+          <button className="btn w-100 border-primary rounded-5 text-light">
+            Signup
+          </button>
+        </div>
+      </form>
+    </div>
   );
 };
 export default SignupPage;

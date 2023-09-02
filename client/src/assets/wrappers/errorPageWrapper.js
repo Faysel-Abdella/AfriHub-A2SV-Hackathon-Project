@@ -6,6 +6,7 @@ const Wrapper = styled.main`
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "Lato", sans-serif;
   img {
     width: 90vw;
     max-width: 600px;
