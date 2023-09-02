@@ -13,8 +13,8 @@ const Features = () => {
                         <img src={aiImg} alt='Feature Icon' style={{width: "5rem"}}/>
                     </div>
                     <div>
-                        <h2 className='text-success'>AI Based Job Suggestion</h2>
-                        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                        <h2 className='text-success medium-italic'>AI Based Job Suggestion</h2>
+                        <p className='paragraph'>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
                         <a href="#" className="btn btn-primary">
                         Read more ..
                         </a>
@@ -25,8 +25,8 @@ const Features = () => {
                         <img src={curImg} alt='Feature Icon' style={{width: "5rem"}}/>
                     </div>
                     <div>
-                    <h2 className='text-success'>Support African's Local Currencies</h2>
-                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                    <h2 className='text-success medium-italic'>Support African's Local Currencies</h2>
+                    <p className='paragraph'>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
                     <a href="#" className="btn btn-primary">
                        Read more ..
                     </a>
@@ -37,8 +37,8 @@ const Features = () => {
                         <img src={lanImg} alt='Feature Icon' style={{width: "5rem"}}/>
                     </div>
                     <div>
-                    <h2 className='text-success'>Support African's Language</h2>
-                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                    <h2 className='text-success medium-italic'>Support African's Language</h2>
+                    <p className='paragraph'>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
                     <a href="#" className="btn btn-primary">
                        Read more ..
                     </a>

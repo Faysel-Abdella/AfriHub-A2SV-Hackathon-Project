@@ -11,10 +11,11 @@ const Hero = () => {
         style={{ height: "90vh" }}
       >
         <div className="col-12 col-md-6">
-          <h1 className="text-primary my-3" style={{ textAlign: "left" }}>
+          <h1 className="text-primary my-3 large" style={{ textAlign: "left", fontSize: "Clamp(2rem, 2rem + 2vw, 4rem)" }}>
+          {/* <h1 className="text-primary my-3 large" style={{ textAlign: "left", fontSize: "" }}> */}
             Connecting Talents Across Africa!
           </h1>
-          <p className="">
+          <p className="paragraph">
             The biggest problem in Africa is not the lack of jobs; the real
             problem is that we do not know where to look!
           </p>

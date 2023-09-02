@@ -8,20 +8,19 @@ const Description = () => {
     <div className="container-fluid">
       <div
         className="container d-flex align-items-center flex-wrap"
-        style={{ height: "90vh" }}
       >
         <div className="col-12 col-md-6 d-flex justify-content-center">
           <img src={desImg} className="w-75 w-md-50"/>
         </div>
         <div className="col-12 col-md-6">
-            <h1 className="text-primary my-5" style={{textAlign: "left"}}>Why Choose to Work with Us?</h1>
+            <h1 className="text-primary my-5 large-normal" style={{textAlign: "left"}}>Why Choose to Work with Us?</h1>
             <div className="col d-flex align-items-start">
                 <div className="icon-square bg-light text-dark flex-shrink-0 me-3">
                     <FontAwesomeIcon icon={faMoneyBillWave} className='text-success fs-3'/>
                 </div>
                 <div>
-                    <h5 className='text-success'>Register and Get Started for Free</h5>
-                    <p className='text-dark fs-7'>Sign up today and begin your journey without any cost. Find Job that Best Suits You whith our AI.</p>
+                    <h5 className='text-success medium-italic fs-4'>Register and Get Started for Free</h5>
+                    <p className='text-dark fs-7 paragraph'>Sign up today and begin your journey without any cost. Find Job that Best Suits You whith our AI.</p>
                 </div>
             </div>
             <div className="col d-flex align-items-start">
@@ -29,8 +28,8 @@ const Description = () => {
                     <FontAwesomeIcon icon={faMoneyBillWave} className='text-success fs-3'/>
                 </div>
                 <div>
-                    <h5 className='text-success'>Post a job and Hire Talented University Students</h5>
-                    <p className='text-dark fs-7'>Take advantage site to post job openings and connect with highly skilled university students ready to contribute their talent to your Startup.</p>
+                    <h5 className='text-success medium-italic fs-4'>Post a job and Hire Talented University Students</h5>
+                    <p className='text-dark fs-7 paragraph'>Take advantage site to post job openings and connect with highly skilled university students ready to contribute their talent to your Startup.</p>
                 </div>
             </div>
             <div className="col d-flex align-items-start">
@@ -38,8 +37,8 @@ const Description = () => {
                     <FontAwesomeIcon icon={faMoneyBillWave} className='text-success fs-3'/>
                 </div>
                 <div>
-                    <h5 className='text-success'>Work with your Local Currence and Language</h5>
-                    <p className='text-dark fs-7'>Our generative AI job searching enables you to find opportunities that align with your local currency and language preferences.</p>
+                    <h5 className='text-success medium-italic fs-4'>Work with your Local Currence and Language</h5>
+                    <p className='text-dark fs-7 paragraph'>Our generative AI job searching enables you to find opportunities that align with your local currency and language preferences.</p>
                 </div>
             </div>
         </div>

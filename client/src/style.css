@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "Familjen Grotesk";
+    src: url('./assets/fonts/FamiljenGrotesk.woff2') format('woff2-variations');
+    font-weight: 400 700;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Familjen Grotesk italic";
+    src: url('./assets/fonts/FamiljenGrotesk-Italic.woff2') format('woff2-variations');
+    font-weight: 400 700;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Work sans";
+    src: url('./assets/fonts/WorkSans.woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-display: swap;
+  }
+
+  .large{
+    font-family: "Familjen Grotesk", sans-serif;
+    font-weight: 700;
+  }
+  .large-normal{
+    font-family: "Familjen Grotesk", sans-serif;
+    font-weight: 500;
+  }
+  .medium-italic{
+    font-family: "Familjen Grotesk italic", sans-serif;
+    font-weight: 500;
+  }
+  .paragraph{
+    opacity: 0.8;
+    font-family: "Work sans", sans-serif;
+    font-weight: 400;
+  }
