@@ -36,7 +36,7 @@ const PostCard = ({ title, description, skills, location, postDate, deadline, pr
         </div>
         <div className="col-12 col-md-4 py-2 py-md-0">
             <button className="btn btn-outline-primary mx-3 py-1 my-1">Save Project</button>
-            <button className="btn btn-primary mx-3 py-1 my-1">Applay Now</button>
+            <button className="btn btn-primary mx-3 py-1 my-1">Apply Now</button>
         </div>
     </div>
     <div className=" d-flex flex-wrap border-top py-1 px-4 mt-2">
