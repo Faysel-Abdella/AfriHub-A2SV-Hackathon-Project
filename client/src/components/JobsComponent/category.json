@@ -1,30 +1,67 @@
 [
+    
     {
      "id": "🇩🇿",
-     "Currency": "Algerian dinar"
+     "Category": "Software Development/Engineering"
      },
     {
      "id": "🇦🇴",
-     "Currency": "Angolan kwanza"
+     "Currency": "Mobile App Development "
      },
     {
      "id": "🇧🇯",
-     "Currency": "West African CFA franc"
+     "Currency": "Data Science and Analytics"
      },
     {
      "id": "🇧🇼",
-     "Currency": "Botswana pula"
+     "Currency": "Artificial Intelligence (AI) "
      },
     {
      "id": "🇧🇫",
-     "Currency": "West African CFA franc"
+     "Currency": "Machine Learning (ML)"
      },
     {
      "id": "🇧🇮",
-     "Currency": "Burundi franc"
+     "Currency": "Cybersecurity"
      },
     {
      "id": "🇨🇻",
-     "Currency": "Cape Verdean escudo"
+     "Currency": "Cloud Computing"
+     },
+    {
+     "id": "🇨🇻",
+     "Currency": "DevOps"
+     },
+    {
+     "id": "🇨🇻",
+     "Currency": "UX/UI Design"
+     },
+    {
+     "id": "🇨🇻",
+     "Currency": "Product Management"
+     },
+    {
+     "id": "🇨🇻",
+     "Currency": "IT Support and Systems Administration"
+     },
+    {
+     "id": "🇨🇻",
+     "Currency": "Database Administration"
+     },
+    {
+     "id": "🇨🇻",
+     "Currency": "Network Engineering"
+     },
+    {
+     "id": "🇨🇻",
+     "Currency": "IT Consulting"
+     },
+    {
+     "id": "🇨🇻",
+     "Currency": "IT Operations"
+     },
+    {
+     "id": "🇨🇻",
+     "Currency": "IT Training and Education"
      }
 ]
