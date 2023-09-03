@@ -1,14 +1,14 @@
 import React from "react";
-import JobPost from "../components/JobPost";
-import Footer from "../components/Footer/Footer";
-import Navigation from "../components/Navigation/Navigation";
+import Footer from "../Footer/Footer";
+import Navigation from "../Navigation/Navigation";
+import PostCard from "./PostCard";
 
 const JobsPost = () => {
   return (
     <>
       <Navigation />
       <div className="container">
-        <JobPost
+        <PostCard
           title="Pixel Perfect UI development with React"
           description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt
       quo quibusdam, a quas iste quia ipsum ducimus illum.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt
@@ -19,7 +19,7 @@ const JobsPost = () => {
           price="150"
           skills={["HTML", "CSS", "React", "Django", "Bootstrap"]}
         />
-        <JobPost
+        <PostCard
           title="Pixel Perfect UI development with React"
           description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt
       quo quibusdam, a quas iste quia ipsum ducimus illum."
@@ -29,7 +29,7 @@ const JobsPost = () => {
           price="150"
           skills={["HTML", "CSS", "React", "Django", "Bootstrap"]}
         />
-        <JobPost
+        <PostCard
           title="Pixel Perfect UI development with React"
           description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt
       quo quibusdam, a quas iste quia ipsum ducimus illum."
@@ -39,7 +39,7 @@ const JobsPost = () => {
           price="150"
           skills={["HTML", "CSS", "React", "Django", "Bootstrap"]}
         />
-        <JobPost
+        <PostCard
           title="Pixel Perfect UI development with React"
           description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt
       quo quibusdam, a quas iste quia ipsum ducimus illum."
@@ -49,7 +49,7 @@ const JobsPost = () => {
           price="150"
           skills={["HTML", "CSS", "React", "Django", "Bootstrap"]}
         />
-        <JobPost
+        <PostCard
           title="Pixel Perfect UI development with React"
           description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt
       quo quibusdam, a quas iste quia ipsum ducimus illum."
