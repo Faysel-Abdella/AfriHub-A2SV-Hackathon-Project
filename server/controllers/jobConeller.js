@@ -23,7 +23,7 @@ exports.AddJob = async (req,res,next)=>{
     )
 
   
-    await addjob.save();
+    await addjob.save()
     res.status(200).json({message:"Job Created"});
 
 }
