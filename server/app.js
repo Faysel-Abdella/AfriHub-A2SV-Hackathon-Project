@@ -1,10 +1,8 @@
 require("express-async-error");
 
-
 const express = require("express");
 const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
-const jobrouter = require("./routes/jobRouter")
 const mongoose = require("mongoose");
 
 const cookieParser = require("cookie-parser");
@@ -21,7 +19,15 @@ app.get("/", (req, res, next) => {
   res.send("Hi :)");
 });
 
+app.get("/test", (req, res, next) => {
+  res.json({ message: "Hello world" });
+});
+
+const jobRoute = require("./routes/jobRoute");
 const authRoute = require("./routes/authRoute");
+const userRoute = require("./routes/userRoute");
+
+const { authenticateUser } = require("./middlewares/authMiddleware");
 
 app.use((req, res, next) => {
   //set header to all response, NOTE that setHeader() does not send response
@@ -43,10 +49,8 @@ app.use((req, res, next) => {
 });
 
 app.use(authRoute);
-app.use("/",jobrouter);
-app.get("/test", (req, res, next) => {
-  res.json({ message: "Hello world" });
-});
+app.use(authenticateUser, jobRoute);
+app.use(authenticateUser, userRoute);
 
 //404 middleware
 app.use("*", (req, res, next) => {
@@ -61,7 +65,7 @@ app.use((error, req, res, next) => {
   res.status(statusCode).json({ message: message });
 });
 
-const port = 8080
+const port = 8080;
 mongoose
   .connect(process.env.MONGO_URL)
   .then((result) => {
