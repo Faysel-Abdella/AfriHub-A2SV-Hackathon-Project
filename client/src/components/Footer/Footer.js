@@ -11,12 +11,12 @@ const Footer = () => {
     <footer className="container-fluid footer">
       <div className="container py-5">
         <div className="row flex-column flex-md-row">
-          <div className="col mx-4">
+          <div className="col px-2">
             <img src={logo} alt="LOGO" style={{width: "5rem"}} />
             <h3 className="my-2">AfriHub</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt quo quibusdam, a quas iste quia ipsum ducimus illum.</p>
           </div>
-          <div className="col mx-4">
+          <div className="col px-2">
             <h5 className="large-normal text-success">Use full Links</h5>
             <ul className="list-unstyled">
                 <li><a href="/" className="link-dark d-block text-decoration-none paragraph">Home</a></li>
@@ -28,7 +28,7 @@ const Footer = () => {
                 <li><a href="/" className="link-dark d-block text-decoration-none paragraph">Home</a></li>
             </ul>
           </div>
-          <div className="col mx-4">
+          <div className="col px-2">
           <h5 className="large-normal text-success">Quick Links</h5>
             <ul className="list-unstyled">
                 <li><a href="/" className="link-dark d-block text-decoration-none paragraph">Affiliate</a></li>
