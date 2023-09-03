@@ -30,7 +30,7 @@ const RecommendedJobPost = () => {
        location="johannesburg, South Africa"
         postDate="12/08/2023" 
         deadline="23/08/2023"
-         price="800KES - 1,000KES" 
+         price="800ZAR - 1,000ZAR" 
          skills={["Web Development", "HTML","CSS", "JavaScript", "E-commerce"]} />
          <PostCard
          title="Marketing Manager for Tourism Promotion" 

@@ -43,7 +43,7 @@ const PostCard = ({ title, description, skills, location, postDate, deadline, pr
         <div className="col-5 col-md-3">Location: <span className="text-primary">{ location }</span></div>
         <div className="col-5 col-md-3">Posted on: <span className="text-primary">{ postDate }</span></div>
         <div className="col-5 col-md-3">Deadline: <span className="text-primary">{ deadline }</span></div>
-        <div className="col-5 col-md-3 d-flex gap-2">Ratin: <Rating /></div>
+        <div className="col-5 col-md-3 d-flex gap-2">Rating: <Rating /></div>
     </div>
     </div>
   );
