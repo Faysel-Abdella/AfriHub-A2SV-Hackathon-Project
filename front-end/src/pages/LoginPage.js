@@ -41,7 +41,7 @@ export const action = async ({ request }) => {
 
 const LoginPage = () => {
   const navigation = useNavigation();
-  const isSubmitting = navigation === "submitting";
+  const isSubmitting = navigation.state === "submitting";
   return (
     <div
       className="container-fluid d-flex justify-content-center align-items-center"
