@@ -49,8 +49,8 @@ app.use((req, res, next) => {
 });
 
 app.use(authRoute);
-app.use(authenticateUser, jobRoute);
-app.use(authenticateUser, userRoute);
+app.use(jobRoute);
+app.use(userRoute);
 
 //404 middleware
 app.use("*", (req, res, next) => {
