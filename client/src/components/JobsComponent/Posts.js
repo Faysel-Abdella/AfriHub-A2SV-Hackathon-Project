@@ -1,12 +1,9 @@
 import React from "react";
-import Footer from "../Footer/Footer";
-import Navigation from "../Navigation/Navigation";
 import PostCard from "./PostCard";
 
 const JobsPost = () => {
   return (
     <>
-      <Navigation />
       <div className="container">
         <PostCard
           title="Pixel Perfect UI development with React"
@@ -60,8 +57,6 @@ const JobsPost = () => {
           skills={["HTML", "CSS", "React", "Django", "Bootstrap"]}
         />
       </div>
-      <div className="my-5">.</div>
-      <Footer />
     </>
   );
 };
