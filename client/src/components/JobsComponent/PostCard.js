@@ -14,7 +14,9 @@ function Rating(){
     )
 }
 
-const JobPost = ({ title, description, skills, location, postDate, deadline, price }) => {
+// RecommendedJobPost
+
+const PostCard = ({ title, description, skills, location, postDate, deadline, price }) => {
   return (
     <div className="card my-5 px-3">
     <div className="title border-bottom d-flex justify-content-between align-items-center">
@@ -32,8 +34,8 @@ const JobPost = ({ title, description, skills, location, postDate, deadline, pri
                 )
             })}
         </div>
-        <div className="col-12 col-md-4">
-            <button className="btn btn-primary mx-3 py-1 my-1">Save Project</button>
+        <div className="col-12 col-md-4 py-2 py-md-0">
+            <button className="btn btn-outline-primary mx-3 py-1 my-1">Save Project</button>
             <button className="btn btn-primary mx-3 py-1 my-1">Applay Now</button>
         </div>
     </div>
@@ -47,4 +49,4 @@ const JobPost = ({ title, description, skills, location, postDate, deadline, pri
   );
 };
 
-export default JobPost;
+export default PostCard;
