@@ -33,7 +33,7 @@ const SignupPage = () => {
   return (
     <div
       className="container-fluid d-flex justify-content-center align-items-center"
-      style={{ height: "100%", background: "#b4c7ff" }}
+      style={{ minHeight: "100%", background: "#b4c7ff" }}
     >
       <Form
         method="POST"
