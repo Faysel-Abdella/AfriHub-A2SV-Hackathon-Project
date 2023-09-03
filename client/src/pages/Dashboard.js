@@ -1,41 +1,98 @@
-import React, { useState } from 'react'
-import Footer from '../components/Footer/Footer'
-import Navigation from '../components/Navigation/Navigation'
-import { Outlet } from 'react-router-dom'
+import React, { useState, useEffect } from "react";
+import Footer from "../components/Footer/Footer";
+import Navigation from "../components/Navigation/Navigation";
+import { Outlet } from "react-router-dom";
+import customFetch from "../utils/customeFecth";
 
-function Tabs (){
+import {
+  Link,
+  Form,
+  useNavigation,
+  redirect,
+  useActionData,
+  useNavigate,
+} from "react-router-dom";
 
+import { toast } from "react-toastify";
+
+function Tabs() {
   const isActive = "recommendation";
-  console.log(isActive === "recommendation")
-  console.log(isActive)
+  console.log(isActive === "recommendation");
+  console.log(isActive);
 
-  return(
-    <div className='container my-5'>
+  return (
+    <div className="container my-5">
       <ul className="nav nav-tabs">
-        <li className={isActive === "recommendation" ? 'nav-item active' : 'nav-item'} onClick={() => {isActive = "recommendation"}}>
-          <a className="nav-link" href="/dashboard">Recommended Jobs</a>
+        <li
+          className={
+            isActive === "recommendation" ? "nav-item active" : "nav-item"
+          }
+          onClick={() => {
+            isActive = "recommendation";
+          }}
+        >
+          <a className="nav-link" href="/dashboard">
+            Recommended Jobs
+          </a>
         </li>
-        <li className={isActive == "posts" ? 'nav-item active' : 'nav-item'} onClick={() => {isActive = "posts"}}>
-          <a className="nav-link" href="/dashboard/posts">Posts</a>
+        <li
+          className={isActive == "posts" ? "nav-item active" : "nav-item"}
+          onClick={() => {
+            isActive = "posts";
+          }}
+        >
+          <a className="nav-link" href="/dashboard/posts">
+            Posts
+          </a>
         </li>
-        <li className={isActive == "addjobs" ? 'nav-item active' : 'nav-item'} onClick={() => {isActive = "addjobs"}}>
-          <a className="nav-link" href="/dashboard/addjobs" >Add Job</a>
+        <li
+          className={isActive == "addjobs" ? "nav-item active" : "nav-item"}
+          onClick={() => {
+            isActive = "addjobs";
+          }}
+        >
+          <a className="nav-link" href="/dashboard/addjobs">
+            Add Job
+          </a>
         </li>
       </ul>
     </div>
-  )
+  );
 }
 
-const Dashboard = ( ) => {
+const Dashboard = () => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    const data = {
+      token: token,
+    };
+
+    console.log("This is my token", data);
+    const checkTheUser = async () => {
+      try {
+        await customFetch.post("/users/check-user", data);
+
+        // toast.success("Login success", { autoClose: 3000 });
+        return redirect("/jobs");
+      } catch (error) {
+        // toast.error(error?.response?.data?.message);
+        error.message = error?.response?.data?.message;
+        return navigate("/signup");
+      }
+    };
+    checkTheUser();
+  }, []);
+
   return (
     <>
       <Navigation />
       <Tabs />
       <Outlet />
-      <div className='my-5'>.</div>
+      <div className="my-5">.</div>
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;

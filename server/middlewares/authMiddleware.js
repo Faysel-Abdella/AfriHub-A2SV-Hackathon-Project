@@ -22,9 +22,7 @@ exports.authenticateUser = (req, res, next) => {
     const { id } = verifyJWT(token);
     //Attach the userId and role to the req object for later use
 
-    const userId = id;
-
-    req.user = { userId: userId };
+    req.user = { userId: id };
     //the same as saying req { user: {userId, role} }
     console.log(req.user);
     next();
