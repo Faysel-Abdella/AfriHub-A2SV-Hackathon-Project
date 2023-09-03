@@ -32,12 +32,35 @@ const RecommendedJobPost = () => {
         deadline="23/08/2023"
          price="800KES - 1,000KES" 
          skills={["Web Development", "HTML","CSS", "JavaScript", "E-commerce"]} />
-        <PostCard title="Pixel Perfect UI development with React" description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt
-      quo quibusdam, a quas iste quia ipsum ducimus illum." location="Ethiopia" postDate="09/08/2023" deadline="23/08/2023" price="150" skills={["HTML", "CSS", "React", "Django", "Bootstrap"]} />
-        <PostCard title="Pixel Perfect UI development with React" description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt
-      quo quibusdam, a quas iste quia ipsum ducimus illum." location="Ethiopia" postDate="09/08/2023" deadline="23/08/2023" price="150" skills={["HTML", "CSS", "React", "Django", "Bootstrap"]} />
-        <PostCard title="Pixel Perfect UI development with React" description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt
-      quo quibusdam, a quas iste quia ipsum ducimus illum." location="Ethiopia" postDate="09/08/2023" deadline="23/08/2023" price="150" skills={["HTML", "CSS", "React", "Django", "Bootstrap"]} />
+         <PostCard
+         title="Marketing Manager for Tourism Promotion" 
+         description="Are you passionate about marketing and travel? We're hiring a Marketing Manager to promote tourism in Marrakech, Morocco. Help us showcase the beauty of this city to the world."
+         location="Marrakech, Morocco"
+         postDate="10/08/2023" 
+         deadline="25/08/2023"
+         price="1,200MAD - 1,500MAD" 
+         skills={["Marketing", "Tourism Promotion", "Digital Marketing", "Social Media"]}
+       />
+       <PostCard
+  title="Freelance Content Writer for Tech Blog" 
+  description="We're in search of a freelance Content Writer with a passion for technology to contribute to our tech blog. Join our remote team in Lagos, Nigeria, and help us create engaging content."
+  location="Lagos, Nigeria"
+  postDate="14/08/2023" 
+  deadline="28/08/2023"
+  price="500NGN - 800NGN per article" 
+  skills={["Content Writing", "Technology", "Blogging", "SEO"]}
+/>
+
+<PostCard
+  title="Freelance UI/UX Designer for Mobile App" 
+  description="We're looking for a freelance UI/UX Designer to enhance the user experience of our mobile app. Join our project in Accra, Ghana, and help us create a user-friendly app."
+  location="Accra, Ghana"
+  postDate="11/08/2023" 
+  deadline="26/08/2023"
+  price="800GHS - 1,000GHS" 
+  skills={["UI/UX Design", "Mobile App Design", "User Experience", "Figma"]}
+/>
+
     </div>
   );
 };
