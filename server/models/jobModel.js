@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const JobSchema = new Schema({
   client: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "userModel",
+    ref: "user",
     required: true,
   },
   title: {
