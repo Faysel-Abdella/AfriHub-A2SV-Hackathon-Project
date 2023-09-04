@@ -22,12 +22,12 @@ const AddJobs = () => {
             <div className="row my-4 w-100">
                 <div className="col">
                     <label className='fs-6 form-label text-primary'>Project Title:</label>
-                    <input type="text" className="form-control" placeholder="Enter Job Title" name="title" />
+                    <input type="text" className="form-control" placeholder="Enter Job Title" name="title" required/>
                 </div>
                 <div className="col">
                     <label className='fs-6 form-label text-primary'>Project Location:</label>
-                    <select class="form-select">
-                        <option>Sellect Country</option>
+                    <select class="form-select" required>
+                        <option>Select Country</option>
                         {countries.map(country => {
                             return(
                                 <option key={country.id}>{country.CountryName}</option>
@@ -40,8 +40,8 @@ const AddJobs = () => {
                 <div class="col">
                     <label className='fs-6 form-label text-primary'>Project Budget:</label>
                     <div class="input-group mb-3">
-                        <select class="form-select" name='currency'>
-                            <option>Sellect Country</option>
+                        <select class="form-select" name='currency' required>
+                            <option>Select Currency</option>
                             {currency.map(data => {
                                 return(
                                     <option key={data.id}>{data.Currency}</option>
@@ -53,14 +53,14 @@ const AddJobs = () => {
                 </div>
                 <div class="col">
                     <label className='fs-6 form-label text-primary'>Project Deadline:</label>
-                    <input type="date" class="form-control" placeholder="Deadline" name="deadline" />
+                    <input type="date" class="form-control" placeholder="Deadline" name="deadline" required/>
                 </div>
             </div>
             <div className="row my-4 w-100">
                 <div className="col">
                     <label className='fs-6 form-label text-primary'>Project Category:</label>
-                    <select class="form-select">
-                        <option>Sellect Project Category</option>
+                    <select class="form-select" required>
+                        <option>Select Project Category</option>
                         {categories.map(category => {
                                 return(
                                     <option key={category.id}>{category.Currency}</option>
@@ -70,28 +70,27 @@ const AddJobs = () => {
                 </div>
                 <div className="col">
                     <label className='fs-6 form-label text-primary'>Skill Level:</label>
-                    <select class="form-select">
-                        <option>Sellect Skill Level</option>
+                    <select class="form-select" required>
+                        <option>Select Skill Level</option>
                         <option>Beginner</option>
                         <option>Intermediate</option>
                         <option>Advanced</option>
                     </select>
                 </div>
             </div>
-            <div className='row w-100'>
+            <div className='row my-4 w-100'>
                 <div className='col-12'>
                     <label className='fs-6 form-label text-primary'>Project Description:</label>
-                    <textarea class="form-control w-100" rows="4" name="description"></textarea>
+                    <textarea class="form-control w-100" rows="4" name="description" required></textarea>
                 </div>
             </div>
-            <div className='row w-100'>
+            <div className='row my-4 w-100'>
                 <div className='col'>
-                        <input type='text' onChange={handleSkill} ref={skillRef} class="form-control" placeholder="Skills"/>
-                </div>
-                <div className='col'>
-                    <input type='text' onChange={handleSkill} ref={skillRef} class="form-control" placeholder="Skills"/>
+                    <label className='fs-6 form-label text-primary'>Skills: <span className='text-dark '>Enter Skills Separeted by ","</span></label>
+                    <input type='text' onChange={handleSkill} ref={skillRef} class="form-control" placeholder="Skills" required/>
                 </div>
             </div>
+            <button className="btn w-100 bg-primary rounded-5 text-light mt-3">Add Job </button>
         </form>
     </div>
   )
