@@ -67,16 +67,14 @@ const Dashboard = () => {
     const data = {
       token: token,
     };
-
-    console.log("This is my token", data);
+    
     const checkTheUser = async () => {
       try {
         await customFetch.post("/users/check-user", data);
 
-        // toast.success("Login success", { autoClose: 3000 });
         return redirect("/jobs");
       } catch (error) {
-        // toast.error(error?.response?.data?.message);
+
         error.message = error?.response?.data?.message;
         return navigate("/signup");
       }

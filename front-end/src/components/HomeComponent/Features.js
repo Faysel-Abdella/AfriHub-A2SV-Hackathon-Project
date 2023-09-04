@@ -3,6 +3,10 @@ import aiImg from '../../assets/images/ai.svg'
 import curImg from '../../assets/images/money.svg'
 import lanImg from '../../assets/images/language.svg'
 
+<p>
+AI Based Job Suggestion systems leverage the power of AI to analyze individual skills, preferences, and market trends. is also personalized career guidance and recommend suitable job.
+</p>
+
 const Features = () => {
   return (
     <div className='my-5 container'>
@@ -14,7 +18,8 @@ const Features = () => {
                     </div>
                     <div>
                         <h2 className='text-success medium-italic'>AI Based Job Suggestion</h2>
-                        <p className='paragraph'>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                        <p className='paragraph'>The Suggestion systems leverage the power of AI to analyze individual skills, preferences, 
+                        and market trends. is also personalized career guidance and recommend suitable job.</p>
                         <a href="#" className="btn btn-primary">
                         Read more ..
                         </a>
@@ -26,7 +31,8 @@ const Features = () => {
                     </div>
                     <div>
                     <h2 className='text-success medium-italic'>Support African's Local Currencies</h2>
-                    <p className='paragraph'>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                    <p className='paragraph'>Supporting African local currencies is essential for promoting economic independence, sustainable development, 
+                    and empowerment across the continent of Africa. </p>
                     <a href="#" className="btn btn-primary">
                        Read more ..
                     </a>
@@ -38,7 +44,8 @@ const Features = () => {
                     </div>
                     <div>
                     <h2 className='text-success medium-italic'>Support African's Language</h2>
-                    <p className='paragraph'>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                    <p className='paragraph'>Supporting African languages is vital for preserving cultural richness, promoting identity, fostering inclusion, 
+                    and facilitating intergenerational knowledge transmission.</p>
                     <a href="#" className="btn btn-primary">
                        Read more ..
                     </a>
