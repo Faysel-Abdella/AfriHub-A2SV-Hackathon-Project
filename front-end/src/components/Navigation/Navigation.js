@@ -1,5 +1,9 @@
-import React from "react";
+// import React from "react";
+import React, { useState, useEffect } from "react";
+
 import { useNavigate } from "react-router-dom";
+
+import customFetch from "../../utils/customeFecth";
 
 import logo from "../../assets/images/africa-logo.png";
 
@@ -14,6 +18,31 @@ const Navigation = () => {
   const handleSignup = () => {
     navigate(`/signup`);
   };
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    navigate('/')
+  }
+
+  const [isLogedin, setIsLogedin] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    const data = {
+      token: token,
+    };
+    const checkTheUser = async () => {
+      try {
+        await customFetch.post("/users/check-user", data);
+        setIsLogedin(true)
+      } catch (error) {
+        error.message = error?.response?.data?.message;
+        // return navigate("/signup");
+        setIsLogedin(false)
+      }
+    };
+    checkTheUser();
+  }, []);
+
 
   return (
     <header className="p-3 bg-light text-dark heade">
@@ -41,6 +70,7 @@ const Navigation = () => {
             />
           </form>
 
+          {!isLogedin ? 
           <div className="text-end">
             <button
               type="button"
@@ -56,7 +86,17 @@ const Navigation = () => {
             >
               Sign-up
             </button>
+          </div>:
+          <div className="text-end">
+            <button
+              type="button"
+              className="btn btn-warning"
+              onClick={handleLogout}
+            >
+              Logout
+            </button>
           </div>
+          }
         </div>
       </div>
     </header>
