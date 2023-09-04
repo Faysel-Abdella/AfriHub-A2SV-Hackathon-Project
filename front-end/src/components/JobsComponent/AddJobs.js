@@ -84,12 +84,6 @@ const AddJobs = () => {
                     <textarea class="form-control w-100" rows="4" name="description" required></textarea>
                 </div>
             </div>
-            <div className='row my-4 w-100'>
-                <div className='col'>
-                    <label className='fs-6 form-label text-primary'>Skills: <span className='text-dark '>Enter Skills Separeted by ","</span></label>
-                    <input type='text' onChange={handleSkill} ref={skillRef} class="form-control" placeholder="Skills" required/>
-                </div>
-            </div>
             <button className="btn w-100 bg-primary rounded-5 text-light mt-3">Add Job </button>
         </form>
     </div>
